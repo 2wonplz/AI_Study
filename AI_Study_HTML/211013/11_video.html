@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <video src="People - 84973.mp4" controls></video>
+
+    <video controls width="640px" height="360px">
+        <source src="Sand - 73847.mp4" type="video/mp4">
+    </video>
+
+    <!-- 동영상 재생 전 미리 보여지는 그림 (유튜브 썸네일같은) -->
+    <video poster="연꽃.png" controls width="640px" height="360px">
+        <source src="Sand - 73847.mp4" type="video/mp4">
+    </video>
+
+    <!-- 웹사이트 켜자마자 동영상 재생하게 하는 방법 -->
+    <!-- autoplay -->
+    <!-- 크롬에서는 절대 자동재생 X, 파이어폭스에서는 일정 크기? 길이? 미만의 동영상은 재생 O -->
+    <video poster="연꽃.png" controls width="640px" height="360px" autoplay>
+        <source src="Sand - 73847.mp4" type="video/mp4">
+    </video>
+    <video poster="연꽃.png" controls width="640px" height="360px" autoplay>
+        <source src="People - 84973.mp4" type="video/mp4">
+    </video>
+
+    <!-- 단, 음소거하면 자동재생됨 (muted) -->
+    <video poster="연꽃.png" controls width="640px" height="360px" autoplay muted>
+        <source src="Sand - 73847.mp4" type="video/mp4">
+    </video>
+</body>
+
+</html>

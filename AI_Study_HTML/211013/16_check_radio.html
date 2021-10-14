@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <!-- input:c*3 -->
+        <input type="checkbox" name="" id="soccer"> <label for="soccer"> 축구 </label> <br>
+        <input type="checkbox" name="" id="basketball"> <label for="basketball"> 농구 </label> <br>
+        <input type="checkbox" name="" id="handball"> <label for="handball"> 배구 </label> <br>
+        <hr>
+
+        <!-- 아래 5개의 radio가 name값이 다 똑같으면 5개 중 하나를 선택해야함 -->
+        <!-- checked를 적어주면, 웹페이지 시작 시 해당 태그가 선택된 상태로 시작 -->
+        <!-- input:r*3 -->
+        <input type="radio" name="gender" id="male"> <label for="male"> 남자 </label> <br>
+        <input type="radio" name="gender" id="female"> <label for="female"> 여자 </label> <br>
+        <hr>
+        <input type="radio" name="grade" id="up"> <label for="up"> 상 </label> <br>
+        <input type="radio" name="grade" id="mid"> <label for="mid"> 중 </label> <br>
+        <input type="radio" name="grade" id="down"> <label for="down"> 하 </label> <br>
+
+        <!-- '이름'이라는 글자 클릭하면 id가 name인 태그에 focus가 맞춰짐 -->
+        <label for="name"> 이름 </label>
+        <input type="text" id="name">
+    </form>
+</body>
+
+</html>
