@@ -8,7 +8,7 @@ public class Ex {
 		int num = 120;
 		
 		if ((num > 0) && (num % 2 == 0))
-			System.out.println("¾ç¼öÀÌ¸é¼­ Â¦¼ö");
+			System.out.println("ì–‘ìˆ˜ì´ë©´ì„œ ì§ìˆ˜");
 		
 		
 //		5.2
@@ -18,18 +18,18 @@ public class Ex {
 		
 		if (num1 > num2) {
 			big = num1;
-			System.out.println("Å« ¼ö : " + big);
+			System.out.println("í° ìˆ˜ : " + big);
 		} else {
 			big = num2;
-			System.out.println("Å« ¼ö : " + big);
+			System.out.println("í° ìˆ˜ : " + big);
 		}
 		
 		if (num1 > num2) {
 			diff = num1 - num2;
-			System.out.println("Àı´ñ°ª : " + diff);
+			System.out.println("ì ˆëŒ“ê°’ : " + diff);
 		} else {
 			diff = num2 - num1;
-			System.out.println("Àı´ñ°ª : " + diff);
+			System.out.println("ì ˆëŒ“ê°’ : " + diff);
 		}
 		
 		
@@ -63,16 +63,16 @@ public class Ex {
 		
 		switch (result) {
 		case 1: 
-			System.out.println("0 ÀÌ»ó 10 ¹Ì¸¸ÀÇ ¼ö");
+			System.out.println("0 ì´ìƒ 10 ë¯¸ë§Œì˜ ìˆ˜");
 			break;
 		case 2: 
-			System.out.println("10 ÀÌ»ó 20 ¹Ì¸¸ÀÇ ¼ö");
+			System.out.println("10 ì´ìƒ 20 ë¯¸ë§Œì˜ ìˆ˜");
 			break;
 		case 3: 
-			System.out.println("20 ÀÌ»ó 30 ¹Ì¸¸ÀÇ ¼ö");
+			System.out.println("20 ì´ìƒ 30 ë¯¸ë§Œì˜ ìˆ˜");
 			break;
 		default:
-			System.out.println("À½¼ö È¤Àº 30 ÀÌ»óÀÇ ¼ö");
+			System.out.println("ìŒìˆ˜ í˜¹ì€ 30 ì´ìƒì˜ ìˆ˜");
 			break;
 		}
 		
@@ -170,8 +170,6 @@ public class Ex {
 			for (int B = 0; B < 10; B++) {
 				if ((A + B) == 9)
 					System.out.println("A = " + A + ", B = " + B);
-				else
-					continue;
 			}
 		}
 		
