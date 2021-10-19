@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id는 하나만 있어야함 (중복되면 Javascript에서 오류 뜰 가능성 매우높음) */
+        #one {
+            color: red;
+        }
+
+        #one_p {
+            color: blue;
+        }
+
+        #two {
+            color: pink;
+        }
+
+        #two_p {
+            color: skyblue;
+        }
+
+        /* id가 one이거나 one_p인 경우 (or) */
+        #one,
+        #one_p {
+            background-color: yellow;
+        }
+
+        /* h1이면서 동시에 id가 two인 경우 (and) */
+        h1#two {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="one"> Lorem ipsum dolor sit amet. </h1>
+    <p id="one_p"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, laudantium. </p>
+    <h1 id="two"> Lorem ipsum dolor sit amet. </h1>
+    <p id="two_p"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, laudantium. </p>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 어떤 태그 내의 h1 중 가장 첫번째에 적용 */
+        h1:first-of-type {
+            color: red;
+        }
+        
+        /* 어떤 태그 내의 h1 중 가장 마지막에 적용 */
+        h1:last-of-type {
+            color: blue;
+        }
+
+        h1:nth-of-type(2) {
+            background-color: yellow;
+        }
+
+        h1:nth-of-type(2n) {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p> 형태 구조 선택자에서는 상관없음 </p>
+    <h1> Lorem </h1>
+    <h1> Lorem </h1>
+    <h1> Lorem </h1>
+
+    <div>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+    </div>
+</body>
+
+</html>

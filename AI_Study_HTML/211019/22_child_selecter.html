@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 어떤 태그 내에서 h1이 첫번째 자손으로 있을때, 첫번째 h1에만 적용 */
+        h1:first-child {
+            color: red;
+        }
+
+        /* 어떤 태그 내에서 h1이 마지막 자손으로 있을때, 마지막 h1에만 적용 */        
+        h1:last-child {
+            color: blue;
+        }
+
+        /* 2번째에서만 적용 */
+        h1:nth-child(2) {
+            background-color: yellow;
+        }
+
+        /* 짝수번째에서만 적용 */
+        h1:nth-child(2n) {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p> 여기선 첫번째 자손이 p태그이므로 적용이 안됩니다 </p>
+    <h1> Lorem </h1>
+    <h1> Lorem </h1>
+    <h1> Lorem </h1>
+
+    <div>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <h1> Lorem ipsum dolor sit amet. </h1>
+    </div>
+</body>
+
+</html>

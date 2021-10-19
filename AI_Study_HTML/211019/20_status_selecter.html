@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 활성화 상태 */
+        input:enabled {
+            background-color: powderblue;
+        }
+
+        /* 비활성화 상태 */
+        input:disabled {
+            background-color: red;
+        }
+
+        /* 마우스로 클릭해서 포커스가 잡혔을때 (값을 입력할때) */
+        input:focus {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <input type="text">
+    <!-- disable : 비활성화 -->
+    <input type="text" disabled>
+</body>
+
+</html>
