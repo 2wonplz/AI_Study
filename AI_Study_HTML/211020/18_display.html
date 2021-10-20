@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+
+        #box1 {
+            /* display: none; */  /*  :  자리 차지 X */
+            visibility: hidden;   /*  :  자리 차지 O */
+        }
+
+        /* div태그와 p태그 둘 다 display값이 block라서 둘 다 inline 적용시킴 */
+        .box2,p {
+            display: inline;
+        }
+
+        .box3, .box3>p {
+            display: inline-block;
+        }
+
+        #box4 {}
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <p> 얘는 안보임 </p>
+    </div>
+
+    <div class="box2">
+        <p> display : inline </p>
+    </div>
+    <div class="box2">
+        <p> display : inline </p>
+    </div>
+    <div class="box2">
+        <p> display : inline </p>
+    </div>
+
+    <div class="box3">
+        <p> display : inline-block </p>
+    </div>
+    <div class="box3">
+        <p> display : inline-block </p>
+    </div>
+    <div class="box3">
+        <p> display : inline-block </p>
+    </div>
+
+    <div id="box4">
+        <p> 아무 것도 적용 안 함. display가 block이면 무조건 한 줄 다 차지 </p>
+    </div>
+</body>
+
+</html>

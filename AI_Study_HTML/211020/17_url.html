@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            height: 400px;
+            /* 배경을 지정한 width와 height에 맞춤 */
+            background-size: 100%;
+        }
+
+        div:first-child {
+            background-image: url("https://picsum.photos/id/42/600/400");
+        }
+
+        div:nth-child(2) {
+            background-image: url("https://picsum.photos/id/1033/600/400");
+        }
+
+        body {
+            background-image: url("instagram_logo.png");
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
