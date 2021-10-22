@@ -20,14 +20,14 @@ for i in range(1, 10):
     print(7, "X", i, "=", (7 * i))
 
 # 5
-for i in [9, 8, 7, 6, 5, 4, 3, 2, 1]:
+for i in [9, 8, 7, 6, 5, 4, 3, 2, 1]:   # == range(9, 0, -1)
     print(7, "X", i, "=", (7 * i))
 
 
 # 6
 def exp(x, y):
     mul = 1
-    for i in range(1, (y + 1)):
+    for i in range(1, (y + 1)):   # == range(y)
         mul *= x
     print(mul)
 
@@ -38,7 +38,7 @@ exp(2, 3)
 # 7
 def greet():
     greet = eval(input("인사를 몇 번 할까요? : "))
-    for i in range(1, (greet + 1)):
+    for i in range(1, (greet + 1)):   # == range(greet)
         print("반갑습니다.")
 
 
