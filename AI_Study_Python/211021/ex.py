@@ -20,14 +20,14 @@ for i in range(1, 10):
     print(7, "X", i, "=", (7 * i))
 
 # 5
-for i in [9, 8, 7, 6, 5, 4, 3, 2, 1]:   # range(9, 0, -1)
+for i in [9, 8, 7, 6, 5, 4, 3, 2, 1]:   # == range(9, 0, -1)
     print(7, "X", i, "=", (7 * i))
 
 
 # 6
 def exp(x, y):
     mul = 1
-    for i in range(1, (y + 1)):
+    for i in range(1, (y + 1)):   # == range(y)
         mul *= x
     print(mul)
 
