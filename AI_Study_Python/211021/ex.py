@@ -38,7 +38,7 @@ exp(2, 3)
 # 7
 def greet():
     greet = eval(input("인사를 몇 번 할까요? : "))
-    for i in range(1, (greet + 1)):
+    for i in range(1, (greet + 1)):   # == range(greet)
         print("반갑습니다.")
 
 
