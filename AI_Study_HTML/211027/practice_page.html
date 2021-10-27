@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::::: PIZZA 501 :::::</title>
+
+    <!-- basic -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        body {
+            background-image: url('img/body_pizza.jpg');
+            background-position: center;
+        }
+    </style>
+
+    <!-- font -->
+    <style>
+        @font-face {
+            font-family: 'HSGaeulSenggak20';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSGaeulSenggak20.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GowunBatang-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cafe24SsurroundAir';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+        h1 {
+            font-family: HSGaeulSenggak20;
+        }
+
+        h3 {
+            font-family: GowunBatang-Regular;
+        }
+
+        #main_header a {
+            font-family: nanumsquare;
+            color: white;
+        }
+
+        #content>#main_aside {
+            font-family: GowunBatang-Regular;
+        }
+
+        #main_section>article.main_article>h1 {
+            font-family: Cafe24Ssurround;
+        }
+
+        #main_section>article.main_article>p {
+            font-family: Cafe24SsurroundAir;
+        }
+    </style>
+
+    <!-- header -->
+    <style>
+        #main_header {
+            width: 1280px;
+            height: 280px;
+            margin: 0 auto;
+            position: relative;
+            background-image: url('img/header_pizza.png');
+            background-repeat: no-repeat;
+
+        }
+
+        #main_header>#title {
+            position: absolute;
+            left: 100px;
+            top: 80px;
+            background-color: crimson;
+            color: white;
+        }
+
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #main_gnb>ul {
+            overflow: hidden;
+        }
+
+        #main_gnb>ul>li {
+            float: left;
+        }
+
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            background-color: crimson;
+        }
+
+        #main_gnb>ul>li>a:hover {
+            background-color: white;
+            color: crimson;
+        }
+    </style>
+
+    <!-- section -->
+    <style>
+        #content {
+            width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #content>#main_section {
+            width: 1050px;
+            float: right;
+        }
+
+        #main_section>article.main_article {
+            height: 250px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            box-sizing: border-box;
+            padding: 100px;
+            background-color: white;
+            text-align: center;
+        }
+
+        #main_section>article.main_article>img {
+            float: left;
+        }
+    </style>
+
+    <!-- aside -->
+    <style>
+        #content>#main_aside {
+            width: 200px;
+            float: left;
+        }
+    </style>
+
+    <style>
+        input:nth-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(1)~div:nth-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(1):checked~div:nth-of-type(1) {
+            display: block;
+        }
+
+        input:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2)~div:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2):checked~div:nth-of-type(2) {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>PIZZA 501</h1>
+            <h3>매일매일 피자만 먹고 살았으면 좋겠다</h3>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">SiteMap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <img src="img/combination.jpg" alt="">
+                <h1> 콤비네이션 피자 (Combination Pizza) </h1>
+                <p> 신선한 재료가 빚어내는 맛의 하모니를 느껴보세요.<br>몸에 좋고, 맛도 좋은 가지각색의 재료가 토핑된 콤비네이션 피자! </p>
+            </article>
+            <article class="main_article">
+                <h1> Title </h1>
+                <p> </p>
+            </article>
+            <article class="main_article">
+                <h1> Title </h1>
+                <p> </p>
+            </article>
+            <article class="main_article">
+                <h1> Title </h1>
+                <p> </p>
+            </article>
+            <article class="main_article">
+                <h1> Title </h1>
+                <p> </p>
+            </article>
+            <article class="main_article">
+                <h1> Title </h1>
+                <p> </p>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input id="pizza" type="radio" name="tab" checked="checked">
+            <section class="buttons">
+                <label for="pizza">Pizza</label>
+            </section>
+            <input id="side" type="radio" name="tab">
+            <section class="buttons">
+                <label for="second">Side</label>
+            </section>
+        </aside>
+    </div>
+    <footer id="main_footer">
+
+    </footer>
+</body>
+
+</html>

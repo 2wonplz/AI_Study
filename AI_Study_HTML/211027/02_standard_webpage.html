@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 표준 웹 페이지 실습 </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* li 태그 앞의 점모양 감춤 */
+        li {
+            list-style: none;
+        }
+
+        /* a 태그의 밑줄 감춤 */
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+    </style>
+    <style>
+        #main_header {
+            width: 960px;
+            height: 160px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #main_header>#title {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+        }
+
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #main_header>#main_lnb {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+    </style>
+    <style>
+        #main_gnb>ul {
+            overflow: hidden;
+        }
+
+        #main_gnb>ul>li {
+            float: left;
+        }
+
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid black;
+        }
+
+        #main_gnb>ul>li>a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #main_gnb>ul>li:first-child>a {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #main_gnb>ul>li:last-child>a {
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+    <style>
+        #main_lnb>ul {
+            overflow: hidden;
+        }
+
+        #main_lnb>ul>li {
+            float: left;
+        }
+
+        #main_lnb>ul>li>a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+
+        #main_lnb>ul>li>a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #main_lnb>ul>li:first-child>a {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #main_lnb>ul>li:last-child>a {
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'SBAggroB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: SBAggroB;
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+        h2 {
+            font-family: 'Irish Grover', cursive;
+        }
+    </style>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumNaMuJeongWeon.css" rel="stylesheet">
+    <style>
+        #main_header a {
+            font-family: 'NanumNaMuJeongWeon';
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        #content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #content>#main_section {
+            width: 750px;
+            float: left;
+        }
+
+        #content>#main_aside {
+            width: 200px;
+            float: right;
+        }
+
+        #main_section>article.main_article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        #main_section>article.main_article>h1 {
+            font-family: "나눔손글씨 펜";
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        input:nth-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(1)~div:nth-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(1):checked~div:nth-of-type(1) {
+            display: block;
+        }
+
+        input:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2)~div:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2):checked~div:nth-of-type(2) {
+            display: block;
+        }
+
+        section.buttons {
+            overflow: hidden;
+        }
+
+        section.buttons>label {
+            display: block;
+            float: left;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+        }
+
+        input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1) {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+
+        input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2) {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            border: 1px solid black;
+            border-top: none;
+        }
+
+        .thumbnail {
+            float: left;
+        }
+
+        .description {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .description>strong {
+            display: block;
+            width: 120px;
+        }
+
+        .description>strong+p {
+            width: 120px;
+        }
+
+        /* 글자가 길어지면 ...으로 생략 */
+        .description>strong,
+        .description>strong+p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <style>
+        #main_footer {
+            width: 960px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1> Standard Web Page </h1>
+            <h2> HTML + CSS3 Basic </h2>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">한글테스트</a></li>
+                <li><a href="#">HTML2_GNB</a></li>
+                <li><a href="#">HTML3_GNB</a></li>
+                <li><a href="#">HTML4_GNB</a></li>
+                <li><a href="#">HTML5_GNB</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">HTML1</a></li>
+                <li><a href="#">HTML2</a></li>
+                <li><a href="#">HTML3</a></li>
+                <li><a href="#">HTML4</a></li>
+                <li><a href="#">HTML5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1> Title </h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti est inventore, cum animi soluta ad
+                    repudiandae perspiciatis eius accusamus cumque voluptatibus delectus quis, excepturi, sed facere?
+                    Velit alias ex voluptates impedit, iste blanditiis facilis dolorem ratione id. Libero, corporis
+                    debitis est aut, harum deleniti rem quae quidem maiores dolores, tempora earum ipsa voluptatum
+                    consequuntur tempore quam nihil vero at? Impedit numquam modi perspiciatis ipsam, cupiditate cum
+                    architecto ex aliquid iure beatae quo error libero dolore veritatis sequi maxime. Laboriosam
+                    pariatur labore, voluptatem dolor debitis ratione natus eligendi deserunt provident totam non fugiat
+                    minus quod quam dicta libero illo sapiente consectetur amet excepturi. Nam velit quaerat quibusdam
+                    dignissimos recusandae quidem provident dolorem exercitationem quis! Perferendis mollitia eaque
+                    necessitatibus id. Eligendi laborum veritatis ipsam rem aut necessitatibus provident architecto
+                    nobis praesentium, impedit tempora beatae magnam quis unde ducimus. Aspernatur, ipsam mollitia ipsum
+                    deleniti nesciunt quia cumque odio modi veritatis, amet fugiat ratione dolore rem quod omnis! Minima
+                    laborum adipisci rem aut, blanditiis ipsa maxime molestias error molestiae sit illum, accusamus
+                    nesciunt minus quod obcaecati optio deserunt amet asperiores! Labore quia atque quae sapiente. Amet
+                    at necessitatibus officiis repellendus explicabo omnis eligendi, enim recusandae officia deserunt
+                    pariatur accusantium ex ipsa, tenetur sed, ipsam dicta accusamus perspiciatis magnam atque. Nesciunt
+                    animi sint perferendis, illum dolore omnis libero culpa ipsa iste! Nulla asperiores veritatis rem
+                    fuga, laborum nisi expedita quo obcaecati, accusantium libero temporibus quisquam aut nesciunt.
+                    Adipisci, numquam? Perspiciatis molestiae amet laboriosam minima, deleniti repellat velit esse
+                    impedit architecto rerum ipsam quibusdam non recusandae earum dicta quos maxime natus doloribus
+                    mollitia omnis repudiandae dolore voluptate necessitatibus eius! Error quod ex mollitia. Ab cum
+                    perferendis odio tempore repellat, mollitia, accusantium id libero voluptates et dignissimos beatae
+                    repellendus est molestiae inventore sunt quibusdam ducimus delectus voluptatem reprehenderit iusto
+                    dolorem laborum. Voluptatem ipsa laudantium dicta debitis laborum rerum reiciendis! Minima similique
+                    atque maiores, qui est repellendus, accusamus aspernatur fugit assumenda enim eum quas, illum quo.
+                    Sapiente, voluptatum error omnis eos suscipit magnam molestiae nulla asperiores cum rerum, nobis,
+                    incidunt sequi placeat! Obcaecati laboriosam repellendus molestias possimus officiis numquam,
+                    repudiandae tempora voluptatum incidunt nihil minima, dolorum rem odio. Ipsam eius reprehenderit
+                    eligendi aspernatur dicta dolores, explicabo voluptatum alias perspiciatis laboriosam, nemo vero.
+                    Officia quibusdam aperiam ea eveniet iste quam harum vitae quia voluptates, repellendus totam
+                    architecto dolore praesentium veniam asperiores fugiat nihil omnis eligendi delectus repudiandae
+                    iure facere! Temporibus magni at aut dolorem vel! Nam quis odio pariatur minus nisi suscipit ducimus
+                    aliquid aut unde dolor at rem facilis placeat, magnam, ad libero nobis, sed eveniet rerum saepe
+                    repellat similique expedita velit! Nemo, accusantium. Minima nulla natus vel officiis voluptatum
+                    ducimus recusandae quibusdam, rem blanditiis nihil eos temporibus tempore? Ipsa magni iusto
+                    repudiandae soluta porro eveniet eaque voluptate itaque laudantium quia voluptatibus molestias,
+                    rerum doloremque, quidem non laborum dolores? Esse voluptatibus iusto eum veritatis fugiat
+                    voluptatum harum error assumenda voluptatem blanditiis, quas hic enim nobis exercitationem explicabo
+                    excepturi dolore at cum facere totam a provident. Tenetur possimus cumque perferendis magnam sunt
+                    beatae. Labore deserunt dolores ab ratione! Quam. </p>
+            </article>
+            <article class="main_article">
+                <h1> Title </h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt saepe vero voluptas esse cum,
+                    ad inventore cumque quae fugit illum incidunt ea! Totam animi, officia necessitatibus reprehenderit
+                    sint temporibus cum quae error neque ex ipsum quia nesciunt maxime nihil recusandae corrupti tenetur
+                    qui autem rem labore repellat molestiae! Eum voluptatem ex obcaecati earum repellat dolores, dolorem
+                    sint soluta id minus expedita ipsam perferendis itaque explicabo inventore, dolore at quasi rerum
+                    labore quam autem voluptatum quisquam. Aut praesentium perspiciatis eveniet molestiae inventore? Sit
+                    pariatur minima voluptates quidem saepe, totam aperiam ab odit numquam dolores adipisci consequatur
+                    non alias eos nostrum. </p>
+            </article>
+            <article class="main_article">
+                <h1> Title </h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt saepe vero voluptas esse cum,
+                    ad inventore cumque quae fugit illum incidunt ea! Totam animi, officia necessitatibus reprehenderit
+                    sint temporibus cum quae error neque ex ipsum quia nesciunt maxime nihil recusandae corrupti tenetur
+                    qui autem rem labore repellat molestiae! Eum voluptatem ex obcaecati earum repellat dolores, dolorem
+                    sint soluta id minus expedita ipsam perferendis itaque explicabo inventore, dolore at quasi rerum
+                    labore quam autem voluptatum quisquam. Aut praesentium perspiciatis eveniet molestiae inventore? Sit
+                    pariatur minima voluptates quidem saepe, totam aperiam ab odit numquam dolores adipisci consequatur
+                    non alias eos nostrum. </p>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input id="first" type="radio" name="tab" checked="checked">
+            <input id="second" type="radio" name="tab">
+            <section class="buttons">
+                <label for="first">First</label>
+                <label for="second">Second</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>First5</strong>
+                                <p>Hello World HTML5 and CSS</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5</strong>
+                                <p>Hello</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5</strong>
+                                <p>Hello</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5</strong>
+                                <p>Hello</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/id/1003/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>Second5</strong>
+                                <p>Hello World HTML5 and CSS</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/id/1003/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5</strong>
+                                <p>Hello</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/id/1003/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5</strong>
+                                <p>Hello</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/id/1003/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5</strong>
+                                <p>Hello</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer id="main_footer">
+        <h3>HTML5 + CSS Basic</h3>
+        <address>WebSite Layout Basic</address>
+    </footer>
+</body>
+
+</html>
