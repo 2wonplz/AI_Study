@@ -1,0 +1,14 @@
+@color: #FF0000;
+@lterations: 510;
+
+div {
+    height: 5px;
+}
+
+.rainbow(@i) when (@i > 0) {
+    div:nth-child(@{i}) {
+        background: darken(@color, @i * 0.1%);
+    }
+    .rainbow((@i) - 1)
+}
+.rainbow(@lterations);
