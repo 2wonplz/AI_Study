@@ -88,6 +88,10 @@
         #main_section>article.main_article>p {
             font-family: Cafe24SsurroundAir;
         }
+
+        #main_aside label {
+            font-family: nanumsquare;
+        }
     </style>
 
     <!-- header -->
@@ -128,11 +132,13 @@
             display: block;
             padding: 2px 10px;
             background-color: crimson;
+            border: 1px solid white;
         }
 
         #main_gnb>ul>li>a:hover {
             background-color: white;
             color: crimson;
+            border: 1px solid crimson;
         }
     </style>
 
@@ -155,7 +161,7 @@
             margin-bottom: 20px;
             box-sizing: content-box;
             padding: 100px;
-            background-color: white;
+            background-color: floralwhite;
             text-align: center;
         }
 
@@ -167,8 +173,26 @@
     <!-- aside -->
     <style>
         #content>#main_aside {
-            width: 200px;
+            width: 230px;
             float: left;
+        }
+
+        section.buttons>label {
+            display: block;
+            width: 230px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: crimson;
+            color: white;
+            border: 1px solid white;
+        }
+
+        section.buttons>label:hover {
+            background-color: white;
+            color: crimson;
+            border: 1px solid crimson;
         }
     </style>
 
@@ -196,6 +220,18 @@
         input:nth-of-type(2):checked~div:nth-of-type(2) {
             display: block;
         }
+
+        input:nth-of-type(3) {
+            display: none;
+        }
+
+        input:nth-of-type(3)~div:nth-of-type(3) {
+            display: none;
+        }
+
+        input:nth-of-type(3):checked~div:nth-of-type(3) {
+            display: block;
+        }
     </style>
 
 </head>
@@ -217,33 +253,6 @@
     </header>
 
     <div id="content">
-        <section id="main_section">
-            <article class="main_article">
-                <img src="img/combination.jpg" alt="">
-                <h1> 콤비네이션 피자 (Combination Pizza) </h1>
-                <p> 신선한 재료가 빚어내는 맛의 하모니를 느껴보세요.<br>몸에 좋고, 맛도 좋은 가지각색의 재료가 토핑된 콤비네이션 피자! </p>
-            </article>
-            <article class="main_article">
-                <h1> Title </h1>
-                <p> </p>
-            </article>
-            <article class="main_article">
-                <h1> Title </h1>
-                <p> </p>
-            </article>
-            <article class="main_article">
-                <h1> Title </h1>
-                <p> </p>
-            </article>
-            <article class="main_article">
-                <h1> Title </h1>
-                <p> </p>
-            </article>
-            <article class="main_article">
-                <h1> Title </h1>
-                <p> </p>
-            </article>
-        </section>
         <aside id="main_aside">
             <input id="pizza" type="radio" name="tab" checked="checked">
             <section class="buttons">
@@ -251,9 +260,45 @@
             </section>
             <input id="side" type="radio" name="tab">
             <section class="buttons">
-                <label for="second">Side</label>
+                <label for="side">Side</label>
+            </section>
+            <input id="drink" type="radio" name="tab">
+            <section class="buttons">
+                <label for="drink">Drink</label>
             </section>
         </aside>
+        <section id="main_section">
+            <article class="main_article">
+                <img src="img/combination.jpg" alt="">
+                <h1> 콤비네이션 피자 (Combination Pizza) </h1>
+                <p> 신선한 재료가 빚어내는 맛의 하모니를 느껴보세요. <br> 몸에 좋고, 맛도 좋은 가지각색의 재료가 토핑된 콤비네이션 피자 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/bulgogi.jpg" alt="">
+                <h1> 불고기 피자 (Bulgogi Pizza) </h1>
+                <p> 한 입 베어물면 불고기의 달콤한 육즙이 입안에 좌르륵~ <br> 한국인의 입맛을 사로잡은 피자 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/potato.jpg" alt="">
+                <h1> 포테이토 피자 (Potato Pizza) </h1>
+                <p> 감칠맛 나는 매쉬 포테이토의 부드러운 맛 <br> 모두가 좋아하는 스테디셀러! </p>
+            </article>
+            <article class="main_article">
+                <img src="img/baconcheese.jpg" alt="">
+                <h1> 베이컨 치즈 피자 (Bacon Cheese Pizza) </h1>
+                <p> 노란 체다치즈의 고소함과 푸짐한 베이컨이 만들어내는 완벽한 콤비 <br> 매니아층의 꾸준한 사랑을 받고 있는 피자 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/pepperoni.jpg" alt="">
+                <h1> 페퍼로니 피자 (Pepperoni Pizza) </h1>
+                <p> 향긋한 페퍼로니와 짭조름한 치즈의 절묘한 조화! <br> 남녀노소 누구나 할 것 없이 빠지게 만드는 매력적인 그 맛 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/cheese.jpg" alt="">
+                <h1> 치즈 피자 (Cheese Pizza) </h1>
+                <p> 피자 가득히 이불을 덮고 있는듯한 통통한 치즈! <br> 입안 가득히 느껴지는 고소한 치즈의 향연! </p>
+            </article>
+        </section>
     </div>
     <footer id="main_footer">
 
