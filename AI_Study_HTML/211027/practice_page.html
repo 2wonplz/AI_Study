@@ -157,6 +157,7 @@
 
         #main_section>article.main_article {
             height: 200px;
+            align-content: center;
             margin: 0 auto;
             margin-bottom: 20px;
             box-sizing: content-box;
@@ -197,43 +198,46 @@
     </style>
 
     <style>
-        input:nth-of-type(1) {
+        input#pizza {
             display: none;
         }
 
-        input:nth-of-type(1)~div:nth-of-type(1) {
+        input#pizza~section#main_section.main_pizza article.main_article {
             display: none;
         }
 
-        input:nth-of-type(1):checked~div:nth-of-type(1) {
+        input#pizza:checked~section#main_section.main_pizza article.main_article {
             display: block;
         }
 
-        input:nth-of-type(2) {
+        input#side {
             display: none;
         }
 
-        input:nth-of-type(2)~div:nth-of-type(2) {
+        input#side~section#main_section.main_side article.main_article {
             display: none;
         }
 
-        input:nth-of-type(2):checked~div:nth-of-type(2) {
+        input#side:checked~section#main_section.main_side article.main_article {
             display: block;
         }
 
-        input:nth-of-type(3) {
+        input#drink {
             display: none;
         }
 
-        input:nth-of-type(3)~div:nth-of-type(3) {
+        input#drink~section#main_section.main_drink article.main_article {
             display: none;
         }
 
-        input:nth-of-type(3):checked~div:nth-of-type(3) {
+        input#drink:checked~section#main_section.main_drink article.main_article {
             display: block;
+        }
+
+        section.buttons {
+            overflow: hidden;
         }
     </style>
-
 </head>
 
 <body>
@@ -255,19 +259,19 @@
     <div id="content">
         <aside id="main_aside">
             <input id="pizza" type="radio" name="tab" checked="checked">
+            <input id="side" type="radio" name="tab">
+            <input id="drink" type="radio" name="tab">
             <section class="buttons">
                 <label for="pizza">Pizza</label>
             </section>
-            <input id="side" type="radio" name="tab">
             <section class="buttons">
                 <label for="side">Side</label>
             </section>
-            <input id="drink" type="radio" name="tab">
             <section class="buttons">
                 <label for="drink">Drink</label>
             </section>
         </aside>
-        <section id="main_section">
+        <section id="main_section" class="main_pizza">
             <article class="main_article">
                 <img src="img/combination.jpg" alt="">
                 <h1> 콤비네이션 피자 (Combination Pizza) </h1>
@@ -297,6 +301,35 @@
                 <img src="img/cheese.jpg" alt="">
                 <h1> 치즈 피자 (Cheese Pizza) </h1>
                 <p> 피자 가득히 이불을 덮고 있는듯한 통통한 치즈! <br> 입안 가득히 느껴지는 고소한 치즈의 향연! </p>
+            </article>
+        </section>
+        <section id="main_section" class="main_side">
+            <article class="main_article">
+                <img src="img/cheesespaghetti.jpg" alt="">
+                <h1> 치즈 오븐 스파게티 (Oven-baked Spaghetti with Cheese) </h1>
+                <p> 맛있는 토마토 소스와 함께 치즈가 주~욱! <br> 넉넉한 치즈가 일품인 오븐 스파게티 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/chicken.jpg" alt="">
+                <h1> 순살치킨 (Boneless Chicken) </h1>
+                <p> 바삭하고 촉촉한 순살치킨! </p>
+            </article>
+            <article class="main_article">
+                <img src="img/cone.jpg" alt="">
+                <h1> 콘샐러드 (Cone Salada) </h1>
+                <p> 누구나 좋아하는 달콤한 스위트콘과 다진 야채가 듬뿍! </p>
+            </article>
+        </section>
+        <section id="main_section" class="main_drink">
+            <article class="main_article">
+                <img src="img/coke.jpg" alt="">
+                <h1> 코카콜라 (Coke) </h1>
+                <p> 피자 먹을때 빠지면 섭섭한 친구 1 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/sprite.jpg" alt="">
+                <h1> 스프라이트 (Sprite) </h1>
+                <p> 피자 먹을때 빠지면 섭섭한 친구 2 </p>
             </article>
         </section>
     </div>
