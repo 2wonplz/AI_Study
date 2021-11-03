@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <img id="myImg">
+    <script>
+        let year = prompt("태어난 연도를 입력하세요.")
+        let tti = year % 12
+        let myImage = document.getElementById('myImg')
+
+        myImage.src = `img/${tti}.png`
+    </script>
+</body>
+</html>

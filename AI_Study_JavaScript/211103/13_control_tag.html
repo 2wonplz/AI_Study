@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <img id="myImg">
+    <script>
+        let myImage1 = document.getElementById('myImg')
+        let myImage2 = document.getElementById('#myImg')
+        
+        let input = prompt("이미지숫자")
+        if (input > 100)
+            myImage1.src = "https://picsum.photos/id/972/600/400"
+        else
+            myImage1.src = `https://picsum.photos/id/${input}/600/400`
+    </script>
+</body>
+</html>
