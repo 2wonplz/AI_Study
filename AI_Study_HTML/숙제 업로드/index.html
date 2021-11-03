@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::::: PIZZA 501 :::::</title>
+
+    <!-- basic -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        body {
+            background-image: url('img/body_pizza.jpg');
+            background-position: center;
+        }
+    </style>
+
+    <!-- font -->
+    <style>
+        @font-face {
+            font-family: 'HSGaeulSenggak20';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSGaeulSenggak20.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GowunBatang-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cafe24SsurroundAir';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+        h1 {
+            font-family: HSGaeulSenggak20;
+        }
+
+        h3 {
+            font-family: GowunBatang-Regular;
+        }
+
+        #main_header a {
+            font-family: nanumsquare;
+            color: white;
+        }
+
+        #content>#main_aside {
+            font-family: GowunBatang-Regular;
+            color: white;
+        }
+
+        .main_section>article.main_article>h1 {
+            font-family: Cafe24Ssurround;
+        }
+
+        .main_section>article.main_article>p {
+            font-family: Cafe24SsurroundAir;
+        }
+
+        #main_aside label {
+            font-family: nanumsquare;
+        }
+
+        #main_aside a {
+            font-family: nanumsquare;
+            color: white;
+        }
+
+        #main_footer>h2 {
+            font-family: HSGaeulSenggak20;
+        }
+
+        #main_footer>p {
+            font-family: nanumsquare;
+        }
+    </style>
+
+    <!-- header -->
+    <style>
+        #main_header {
+            width: 1280px;
+            height: 280px;
+            margin: 0 auto;
+            position: relative;
+            background-image: url('img/header_pizza.png');
+            background-repeat: no-repeat;
+
+        }
+
+        #main_header>#title {
+            position: absolute;
+            left: 100px;
+            top: 80px;
+            background-color: crimson;
+            color: white;
+        }
+
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #main_gnb>ul {
+            overflow: hidden;
+        }
+
+        #main_gnb>ul>li {
+            float: left;
+        }
+
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            background-color: crimson;
+            border: 1px solid white;
+        }
+
+        #main_gnb>ul>li>a:hover {
+            background-color: white;
+            color: crimson;
+            border: 1px solid crimson;
+        }
+    </style>
+
+    <!-- section -->
+    <style>
+        #content {
+            width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #content>.main_section {
+            width: 1050px;
+            float: right;
+        }
+
+        .main_section>article.main_article {
+            height: 200px;
+            align-content: center;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            box-sizing: content-box;
+            padding: 100px;
+            background-color: floralwhite;
+            text-align: center;
+        }
+
+        .main_section>article.main_article>img {
+            float: left;
+        }
+    </style>
+
+    <!-- aside -->
+    <style>
+        #content>#main_aside {
+            width: 230px;
+            float: left;
+        }
+
+        section.buttons>label {
+            display: block;
+            width: 230px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: crimson;
+            color: white;
+            border: 1px solid white;
+        }
+
+        section.buttons>label:hover {
+            background-color: white;
+            color: crimson;
+            border: 1px solid crimson;
+        }
+
+        #main_aside a:hover {
+            color: crimson;
+        }
+
+        #main_aside a:visited {
+            text-decoration: none;
+        }
+
+        #main_aside a:link {
+            text-decoration: none;
+        }
+    </style>
+
+    <style>
+        input#pizza {
+            display: none;
+        }
+
+        input#side {
+            display: none;
+        }
+
+        input#drink {
+            display: none;
+        }
+
+        section.buttons {
+            overflow: hidden;
+        }
+    </style>
+
+    <!-- footer -->
+    <style>
+        #main_footer {
+            width: 1280px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            color: white;
+            background-color: crimson;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>PIZZA 501</h1>
+            <h3>매일매일 피자만 먹고 살았으면 좋겠다</h3>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">SiteMap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        <aside id="main_aside">
+            <input id="pizza" type="radio" name="tab" checked="checked">
+            <section class="buttons">
+                <label for="pizza">
+                    <a href="#main_pizza" id="pizza_a">Pizza</a>
+                </label>
+            </section>
+            <input id="side" type="radio" name="tab">
+            <section class="buttons">
+                <label for="side">
+                    <a href="#main_side" id="side_a">Side</a>
+                </label>
+            </section>
+            <input id="drink" type="radio" name="tab">
+            <section class="buttons">
+                <label for="drink">
+                    <a href="#main_drink" id="drink_a">Drink</a>
+                </label>
+            </section>
+        </aside>
+        <section class="main_section" id="main_pizza">
+            <article class="main_article">
+                <img src="img/combination.jpg" alt="">
+                <h1> 콤비네이션 피자 (Combination Pizza) </h1>
+                <p> 신선한 재료가 빚어내는 맛의 하모니를 느껴보세요. <br> 몸에 좋고, 맛도 좋은 가지각색의 재료가 토핑된 콤비네이션 피자 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/bulgogi.jpg" alt="">
+                <h1> 불고기 피자 (Bulgogi Pizza) </h1>
+                <p> 한 입 베어물면 불고기의 달콤한 육즙이 입안에 좌르륵~ <br> 한국인의 입맛을 사로잡은 피자 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/potato.jpg" alt="">
+                <h1> 포테이토 피자 (Potato Pizza) </h1>
+                <p> 감칠맛 나는 매쉬 포테이토의 부드러운 맛 <br> 모두가 좋아하는 스테디셀러! </p>
+            </article>
+            <article class="main_article">
+                <img src="img/baconcheese.jpg" alt="">
+                <h1> 베이컨 치즈 피자 (Bacon Cheese Pizza) </h1>
+                <p> 노란 체다치즈의 고소함과 푸짐한 베이컨이 만들어내는 완벽한 콤비 <br> 매니아층의 꾸준한 사랑을 받고 있는 피자 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/pepperoni.jpg" alt="">
+                <h1> 페퍼로니 피자 (Pepperoni Pizza) </h1>
+                <p> 향긋한 페퍼로니와 짭조름한 치즈의 절묘한 조화! <br> 남녀노소 누구나 할 것 없이 빠지게 만드는 매력적인 그 맛 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/cheese.jpg" alt="">
+                <h1> 치즈 피자 (Cheese Pizza) </h1>
+                <p> 피자 가득히 이불을 덮고 있는듯한 통통한 치즈! <br> 입안 가득히 느껴지는 고소한 치즈의 향연! </p>
+            </article>
+        </section>
+        <section class="main_section" id="main_side">
+            <article class="main_article">
+                <img src="img/cheesespaghetti.jpg" alt="">
+                <h1> 치즈 오븐 스파게티 (Oven-baked Spaghetti with Cheese) </h1>
+                <p> 맛있는 토마토 소스와 함께 치즈가 주~욱! <br> 넉넉한 치즈가 일품인 오븐 스파게티 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/chicken.jpg" alt="">
+                <h1> 순살치킨 (Boneless Chicken) </h1>
+                <p> 바삭하고 촉촉한 순살치킨! </p>
+            </article>
+            <article class="main_article">
+                <img src="img/cone.jpg" alt="">
+                <h1> 콘샐러드 (Cone Salada) </h1>
+                <p> 누구나 좋아하는 달콤한 스위트콘과 다진 야채가 듬뿍! </p>
+            </article>
+        </section>
+        <section class="main_section" id="main_drink">
+            <article class="main_article">
+                <img src="img/coke.jpg" alt="">
+                <h1> 코카콜라 (Coke) </h1>
+                <p> 피자 먹을때 빠지면 섭섭한 친구 1 </p>
+            </article>
+            <article class="main_article">
+                <img src="img/sprite.jpg" alt="">
+                <h1> 스프라이트 (Sprite) </h1>
+                <p> 피자 먹을때 빠지면 섭섭한 친구 2 </p>
+            </article>
+        </section>
+    </div>
+    <footer id="main_footer">
+        <h2> ※ 주의 : 저희 매장은 하와이안피자는 취급하지 않습니다. </h2>
+        <p> 2021.11.03 HTML5 + CSS 개인과제 </p>
+    </footer>
+</body>
+
+</html>
