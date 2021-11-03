@@ -23,6 +23,12 @@
         console.log(String(Number("문자열")))    // NaN : String을 빼도 마찬가지. 단, String으로 감싸고 있기 때문에 "NaN"인 상태
         console.log(Boolean(String(Number("문자열"))))    // true : 공백이 아닌 문자열이라서
         console.log(Boolean(Number("문자열")))    // false : NaN 자체는 false로 변화되기 때문에
+
+        // 문자열의 길이
+        let a = "안녕하세요. 잘 부탁드립니다."
+        console.log(a.length)
+        // 문자열 각 글자별로 접근가능
+        console.log(a[3])
     </script>
 </head>
 

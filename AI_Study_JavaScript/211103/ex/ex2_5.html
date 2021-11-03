@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let year = prompt("태어난 연도를 입력하세요.")
+        let ten = year % 10
+        let twl = year % 12
+
+        switch (ten) {
+            case 0:
+                ten = "경"
+                break
+            case 1:
+                ten = "신"
+                break
+            case 2:
+                ten = "임"
+                break
+            case 3:
+                ten = "계"
+                break
+            case 4:
+                ten = "갑"
+                break
+            case 5:
+                ten = "을"
+                break
+            case 6:
+                ten = "병"
+                break
+            case 7:
+                ten = "정"
+                break
+            case 8:
+                ten = "무"
+                break
+            case 9:
+                ten = "기"
+                break
+        }
+
+        switch (twl) {
+            case 0:
+                twl = "신"
+                break
+            case 1:
+                twl = "유"
+                break
+            case 2:
+                twl = "술"
+                break
+            case 3:
+                twl = "해"
+                break
+            case 4:
+                twl = "자"
+                break
+            case 5:
+                twl = "축"
+                break
+            case 6:
+                twl = "인"
+                break
+            case 7:
+                twl = "묘"
+                break
+            case 8:
+                twl = "진"
+                break
+            case 9:
+                twl = "사"
+                break
+            case 10:
+                twl = "오"
+                break
+            case 11:
+                twl = "미"
+                break
+        }
+
+        alert("입력하신 " + year + "년은 " + (ten + twl) + "년 입니다.")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
