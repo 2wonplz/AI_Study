@@ -92,6 +92,14 @@
         #main_aside label {
             font-family: nanumsquare;
         }
+
+        #main_footer>h2 {
+            font-family: HSGaeulSenggak20;
+        }
+
+        #main_footer>p {
+            font-family: nanumsquare;
+        }
     </style>
 
     <!-- header -->
@@ -202,11 +210,11 @@
             display: none;
         }
 
-        input#pizza~section#main_section.main_pizza article.main_article {
+        input#pizza~section.main_pizza {
             display: none;
         }
 
-        input#pizza:checked~section#main_section.main_pizza article.main_article {
+        input#pizza:checked~section.main_pizza {
             display: block;
         }
 
@@ -214,11 +222,11 @@
             display: none;
         }
 
-        input#side~section#main_section.main_side article.main_article {
+        input#side~section.main_side {
             display: none;
         }
 
-        input#side:checked~section#main_section.main_side article.main_article {
+        input#side:checked~section.main_side {
             display: block;
         }
 
@@ -226,16 +234,29 @@
             display: none;
         }
 
-        input#drink~section#main_section.main_drink article.main_article {
+        input#drink~section.main_drink {
             display: none;
         }
 
-        input#drink:checked~section#main_section.main_drink article.main_article {
+        input#drink:checked~section.main_drink {
             display: block;
         }
 
         section.buttons {
             overflow: hidden;
+        }
+    </style>
+
+    <style>
+        #main_footer {
+            width: 1280px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            color: white;
+            background-color: crimson;
+            text-align: center;
         }
     </style>
 </head>
@@ -334,7 +355,8 @@
         </section>
     </div>
     <footer id="main_footer">
-
+        <h2> ※ 주의 : 저희 매장은 하와이안피자는 취급하지 않습니다. </h2>
+        <p> 2021.11.03 HTML5 + CSS 개인과제 </p>
     </footer>
 </body>
 
