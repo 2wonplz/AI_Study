@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        // == : 안에 들어있는 값만 같으면 true
+        // === : 타입이랑 값 모두 똑같아야 true
+        console.log("2" == 2) // true
+        console.log("2" === 2) // false
+        console.log(2 === 2) // true
+        console.log("------------------")
+
+        // bool타입은 아니지만 false로 간주하는 것들
+        console.log(Boolean(0))
+        console.log(Boolean(NaN))
+        console.log(Boolean(''))
+        console.log(Boolean(null))
+        console.log(Boolean(undefined))
+        console.log(Boolean(false))
+        console.log("------------------")
+
+        console.log(Boolean('0'))    // true : 공백이 아닌 문자열이라서
+        console.log(String(Number("문자열")))    // NaN : String을 빼도 마찬가지. 단, String으로 감싸고 있기 때문에 "NaN"인 상태
+        console.log(Boolean(String(Number("문자열"))))    // true : 공백이 아닌 문자열이라서
+        console.log(Boolean(Number("문자열")))    // false : NaN 자체는 false로 변화되기 때문에
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
