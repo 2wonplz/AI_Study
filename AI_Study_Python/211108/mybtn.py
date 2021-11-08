@@ -1,6 +1,8 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 import ex04
+import chapter5
+from random import randint
 
 
 class MyApp(QWidget):
@@ -19,6 +21,7 @@ class MyApp(QWidget):
         vLout.addWidget(btn3)
 
         btn1.clicked.connect(self.btn1clicked)
+        btn2.clicked.connect(self.btn2clicked)
 
         self.setLayout(vLout)
         self.setWindowTitle("Qbutton")
@@ -27,6 +30,9 @@ class MyApp(QWidget):
 
     def btn1clicked(self):
         ex04.loadCxlsx()
+
+    def btn2clicked(self):
+        chapter5.dxlsx()
 
 
 if __name__ == '__main__':
