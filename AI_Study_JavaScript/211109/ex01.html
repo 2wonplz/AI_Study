@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myAdd() {
+            let one = document.querySelector("input:nth-of-type(1)").value
+            let two = document.querySelector("input:nth-of-type(2)").value
+            let three = document.querySelector("input:nth-of-type(3)").value
+            let four = document.querySelector("input:nth-of-type(4)").value
+            let five = document.querySelector("input:nth-of-type(5)").value
+
+            alert(Number(one) + Number(two) + Number(three) + Number(four) + Number(five))
+        }
+
+        function myMul() {
+            let one = document.querySelector("input:nth-of-type(1)").value
+            let two = document.querySelector("input:nth-of-type(2)").value
+            let three = document.querySelector("input:nth-of-type(3)").value
+            let four = document.querySelector("input:nth-of-type(4)").value
+            let five = document.querySelector("input:nth-of-type(5)").value
+
+            let myArray = [one, two, three, four, five]
+
+            let mul = 1
+            for (let i in myArray)
+                mul *= myArray[i]
+
+            alert(mul)
+
+            /*
+            let mul = 1
+            let myArray = document.querySelectorAll("input")
+            for (let i in myArray) {
+                if (isNaN(myArray[i].value))
+                    break
+                mul *= Number(myArray[i].value)
+            }
+            alert(mul)
+            */
+
+            /*
+            let mul = 1
+            for (let item of myArray)
+                mul *= Number(item.value)
+            alert(mul)
+            */
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <button onclick="myAdd()">덧셈</button>
+    <button onclick="myMul()">곱셈</button>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let myArray = []
+        for (let i = 0; i < 5; i++) {
+            let num = Number(prompt("숫자를 입력하세요. (중복 X)"))
+            if (myArray.indexOf(num) != -1 && myArray.length > 0) {
+                i--
+                alert("중복된 숫자는 입력할 수 없습니다.")
+                continue
+            }
+            myArray[i] = num
+        }
+
+        for (let item of myArray)
+            console.log(item)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

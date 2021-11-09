@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myAdd() {
+            // id가 one인 태그의 값을 가져옴
+            // 여기선 input태그의 텍스트박스 안에 있는 글자
+            let one = document.getElementById("one").value
+            let two = document.querySelector("#two").value
+            
+            // value값이 문자열이므로 숫자로 형변환해서 계산
+            alert(Number(one) + Number(two))
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="one">
+    <input type="text" id="two">
+    <button onclick="myAdd()">덧셈</button>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myAdd() {
+            let one = document.querySelector("input:nth-of-type(1)").value
+            let two = document.querySelector("input:nth-of-type(2)").value
+
+            alert(Number(one) + Number(two))
+        }
+
+        function myMin() {
+            let one = document.querySelector("input:nth-of-type(1)").value
+            let two = document.querySelector("input:nth-of-type(2)").value
+
+            alert(Number(one) - Number(two))
+        }
+
+        function myMul() {
+            let one = document.querySelector("input:nth-of-type(1)").value
+            let two = document.querySelector("input:nth-of-type(2)").value
+
+            alert(Number(one) * Number(two))
+        }
+
+        function myDiv() {
+            let one = document.querySelector("input:nth-of-type(1)").value
+            let two = document.querySelector("input:nth-of-type(2)").value
+
+            alert(Number(one) / Number(two))
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text">
+    <input type="text">
+    <button onclick="myAdd()">덧셈</button>
+    <button onclick="myMin()">뺄셈</button>
+    <button onclick="myMul()">곱셈</button>
+    <button onclick="myDiv()">나눗셈</button>
+</body>
+
+</html>
