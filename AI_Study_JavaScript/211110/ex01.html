@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="p" id="water"> 물타입 </button>
+    <button class="p" id="fire"> 불타입 </button>
+    <button class="p" id="leaf"> 풀타입 </button> <br>
+    <button class="g" id="1"> 1세대 </button>
+    <button class="g" id="2"> 2세대 </button>
+    <button class="g" id="3"> 3세대 </button>
+    <button class="g" id="4"> 4세대 </button>
+    <button class="g" id="5"> 5세대 </button>
+    <button class="g" id="6"> 6세대 </button>
+    <button class="g" id="7"> 7세대 </button>
+    <button class="g" id="8"> 8세대 </button> <br>
+    <button id="p_battle"> Battle! </button>
+
+    <h3> 나의 포켓몬 </h3>
+    <img id="me">
+    <h3> 상대방의 포켓몬 </h3>
+    <img id="pc">
+    <h1 id="battle_result"></h1>
+
+    <script>
+        let my_type = "-"
+        let my_gen = "-"
+        const WATER = 0
+        const FIRE = 1
+        const LEAF = 2
+        let type = []
+        type[WATER] = "img/물타입.png"
+        type[FIRE] = "img/불타입.png"
+        type[LEAF] = "img/풀타입.png"
+        type[3] = "img/풀타입_2.png"
+
+        // 클릭한 버튼의 id값을 my_type에 넘김
+        function choiceType(choice_type) {
+            my_type = choice_type.target.id
+        }
+
+        // 클릭한 버튼의 id값을 my_gen에 넘김
+        function choiceGeneration(choice_gen) {
+            my_gen = choice_gen.target.id
+        }
+
+        function battle() {
+            if (my_gen == "-" && my_type == "-") {
+                alert("타입과 세대 둘 다 선택해야 합니다.")
+                return
+            }
+
+            let me = document.querySelector("#me")
+            let pc = document.querySelector("#pc")
+
+            let pc_type = Math.floor(Math.random() * 3)
+            let pc_gen = Math.floor(Math.random() * 8 + 1)
+
+            let battle_result = document.querySelector("#battle_result")
+
+            if (pc_gen == 2 && pc_type == LEAF)
+                pc.src = type[3]
+            else
+                pc.src = type[pc_type]
+
+            switch (my_type) {
+                case 'water':
+                    me.src = type[WATER]
+                    switch (pc_type) {
+                        case WATER:
+                            battle_result.innerText = "무승부"
+                            break
+                        case FIRE:
+                            battle_result.innerText = "승리"
+                            break
+                        case LEAF:
+                            battle_result.innerText = "패배"
+                            break
+                    }
+                    break
+                case 'fire':
+                    me.src = type[FIRE]
+                    switch (pc_type) {
+                        case WATER:
+                            battle_result.innerText = "패배"
+                            break
+                        case FIRE:
+                            battle_result.innerText = "무승부"
+                            break
+                        case LEAF:
+                            battle_result.innerText = "승리"
+                            break
+                    }
+                    break
+                case 'leaf':
+                    if (my_gen == 2)
+                        me.src = type[3]
+                    me.src = type[LEAF]
+                    switch (pc_type) {
+                        case WATER:
+                            battle_result.innerText = "승리"
+                            break
+                        case FIRE:
+                            battle_result.innerText = "패배"
+                            break
+                        case LEAF:
+                            if (my_gen == 2 && pc_gen == 2)
+                                battle_result.innerText = "무승부 (치코)"
+                            else if (my_gen != 2 && pc_gen == 2)
+                                battle_result.innerText = "승리 (치코)"
+                            else if (my_gen == 2 && pc_gen != 2)
+                                battle_result.innerText = "패배 (치코)"
+                            else
+                                battle_result.innerText = "무승부 (치코)"
+                            break
+                    }
+                    break
+            }
+        }
+
+        let p_types = document.querySelectorAll(".p")
+        for (let item of p_types)
+            item.onclick = choiceType
+        let g_types = document.querySelectorAll(".g")
+        for (let item of g_types)
+            item.onclick = choiceGeneration
+
+        let p_battle = document.querySelector("#p_battle")
+        p_battle.onclick = battle
+    </script>
+</body>
+
+</html>
