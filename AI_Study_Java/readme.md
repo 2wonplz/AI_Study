@@ -1,4 +1,2 @@
-IDE : Eclipse  
+IDE : Eclipse, Intellij  
 version : 1.8  
-  
-IDE : Intellij
