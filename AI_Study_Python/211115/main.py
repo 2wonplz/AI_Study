@@ -11,8 +11,8 @@ class MyApp(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         self.mex = MyExcel()
+        self.signalfn()
 
-        # savebtn loadbtn createbtn
         self.savebtn.clicked.connect(self.savefn)
         self.loadbtn.clicked.connect(self.loadfn)
         self.createbtn.clicked.connect(self.createfn)
@@ -35,6 +35,9 @@ class MyApp(QMainWindow, form_class):
 
     def createfn(self):
         self.mex.createfn()
+
+    def signalfn(self):
+        self.btn1.clicked.connect(self.loadfn)
 
 
 if __name__ == "__main__":

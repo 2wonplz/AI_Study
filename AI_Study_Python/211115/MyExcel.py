@@ -10,7 +10,8 @@ class MyExcel():
         wb.close()
 
     def loadfn(self):
-        print("MyExcel loadfn")
+        wb = load_workbook('a.xlsx')
+        ws = wb.active
 
     def createfn(self):
         wb = Workbook()
