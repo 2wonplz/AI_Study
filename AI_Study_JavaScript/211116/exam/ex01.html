@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 1. 학생을 등록하고 삭제하는 프로그램 작성
+	 - 학생 데이터는 번호,이름,나이
+	 - 학생 3명을 등록하되, 번호는 
+	   중복되면 안됨
+	 - 특정 학생 삭제도 해보기
+     - 특정 학생 정보 수정 해보기
+     - 특정 학생 정보 조회해보기
+
+    배열에 학생들을 저장하고, 삭제도 해본다.
+    input 태그 3개(번호, 이름, 나이 등록할 거)
+    버튼 4개 (추가, 수정, 삭제, 조회)
+
+    추가 - 중복검사를 번호로 하기(즉 동명이인도 등록됨)
+    수정 - 번호를 기준으로 이름이나 나이 수정가능
+    삭제 - 번호를 기준으로 삭제
+    조회 - 번호를 기준으로 이름이랑 나이 출력(alert) -->
+    <script>
+        function Student(num, name, age) {
+            this.num = num
+            this.name = name
+            this.age = age
+            this.Study = function () {
+                alert('등록 완료. (' + num + '번 ' + age + '살 ' + name + ')')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    번호 : <input type="text"> <br>
+    이름 : <input type="text"> <br>
+    나이 : <input type="text"> <br><br>
+    <button>추가</button>
+    <button>수정</button>
+    <button>삭제</button>
+    <button>조회</button>
+
+    <script>
+        let students = []
+        
+        let num = document.querySelectorAll('input')[0]
+        let name = document.querySelectorAll('input')[1]
+        let age = document.querySelectorAll('input')[2]
+        let add = document.querySelectorAll('button')[0]
+        let refac = document.querySelectorAll('button')[1]
+        let del = document.querySelectorAll('button')[2]
+        let info = document.querySelectorAll('button')[3]
+
+        add.onclick = function () {
+            let addstu = new Student(num.value, name.value, age.value)
+            let temp = students.findIndex(i => i.num == num.value);
+            if (temp != -1) {
+                alert('중복된 번호는 저장할 수 없습니다.')
+            } else {
+                addstu.Study()
+                students.push(addstu)
+            }
+            console.log(students)
+        }
+
+        refac.onclick = function () {
+            let restu = new Student(num.value, name.value, age.value)
+            let temp = students.findIndex(i => i.num == num.value);
+            if (temp == -1) {
+                alert('등록되지 않은 번호입니다.')
+            } else {
+                students[temp].name = name.value
+                students[temp].age = age.value
+                alert('수정 완료.')
+            }
+            console.log(students)
+        }
+
+        del.onclick = function () {
+            let delstu = new Student(num.value, name.value, age.value)
+            let temp = students.findIndex(i => i.num == num.value);
+            students.splice(temp, 1)
+            alert('삭제 완료.')
+            console.log(students)
+        }
+
+        info.onclick = function () {
+            let infostu = new Student(num.value, name.value, age.value)
+            let temp = students.findIndex(i => i.num == num.value);
+            alert(students[temp].num + '번 ' + students[temp].age + '살 ' + students[temp].name)
+        }
+
+        
+    </script>
+</body>
+
+</html>

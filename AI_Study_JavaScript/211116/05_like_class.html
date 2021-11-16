@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function MyStudent1(name, age) {
+            this.name = name
+            this.age = age
+            this.Study = function () {
+                alert(name + ' 학생 등록 완료')
+            }
+        }
+
+        function MyStudent2(name, age) {
+            return {
+                name: name,
+                age: age,
+                Study: function () {
+                    alert(name + ' 학생 등록 완료')
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    이름 : <input type="text"> <br>
+    나이 : <input type="text"> <br>
+
+    <h1>학생명 : </h1>
+    <h1>학생이 태어난 연도 : </h1>
+
+    <button>이름, 출생년도 출력</button>
+    <script>
+        let name = document.querySelectorAll('input')[0]
+        let age = document.querySelectorAll('input')[1]
+        let myName = document.querySelectorAll('h1')[0]
+        let myYear = document.querySelectorAll('h1')[1]
+        let mybtn = document.querySelector('button')
+
+        mybtn.onclick = function () {
+            let dj = new MyStudent1(name.value, age.value)
+            // let dj = MyStudent2(name.value, age.value)
+            console.log(dj)
+            myName.innerText = "학생명 : "
+            myYear.innerText = "학생이 태어난 연도 : "
+            myName.innerText += dj.name
+            myYear.innerText += 2022 - Number(dj.age)
+            dj.Study()
+        }
+    </script>
+</body>
+
+</html>
