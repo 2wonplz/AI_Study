@@ -63,7 +63,6 @@
         }
 
         refac.onclick = function () {
-            let restu = new Student(num.value, name.value, age.value)
             let temp = students.findIndex(i => i.num == num.value);
             if (temp == -1) {
                 alert('등록되지 않은 번호입니다.')
@@ -76,7 +75,6 @@
         }
 
         del.onclick = function () {
-            let delstu = new Student(num.value, name.value, age.value)
             let temp = students.findIndex(i => i.num == num.value);
             students.splice(temp, 1)
             alert('삭제 완료.')
@@ -84,7 +82,6 @@
         }
 
         info.onclick = function () {
-            let infostu = new Student(num.value, name.value, age.value)
             let temp = students.findIndex(i => i.num == num.value);
             alert(students[temp].num + '번 ' + students[temp].age + '살 ' + students[temp].name)
         }
