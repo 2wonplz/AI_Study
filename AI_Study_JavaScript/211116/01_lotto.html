@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        h1 {
+            display: inline-block;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <br>
+    <button>로또 색깔입히기</button>
+    <button id="random_color">로또 랜덤 색깔</button>
+    <button id="rdcol">로또 랜덤 색깔 (일괄)</button>
+    <script>
+        let lotto = []
+        for (let i = 0; i < 7; i++) {
+            let num = Math.floor(Math.random() * 45) + 1
+            if (i > 0) {
+                if (lotto.indexOf(num) != -1) {
+                    i--
+                    continue
+                }
+            }
+            lotto[i] = Number(num)
+        }
+
+        let h1list = document.querySelectorAll('h1')
+        let i = 0
+        for (let item of h1list) {
+            item.innerText = lotto[i]
+            i++
+        }
+    </script>
+    <script>
+        let mybtn = document.querySelector('button')
+        mybtn.onclick = function () {
+            // let temph1list = document.querySelectorAll('h1')
+            for (let item of h1list) {
+                item.style.backgroundColor = 'springgreen'
+            }
+        }
+        let random_btn = document.querySelector('#random_color')
+        let mycolor = ['yellow', 'blue', 'red', 'gray', 'green']
+
+        random_btn.onclick = function () {
+            for (let item of h1list) {
+                let mc = Math.floor(Math.random() * mycolor.length)
+                item.style.backgroundColor = mycolor[mc]
+            }
+        }
+    </script>
+    <script>
+        let randbtn = document.querySelector('#rdcol')
+        randbtn.onclick = function () {
+            let col = Math.floor(Math.random() * mycolor.length)
+            for (let item of h1list) {
+                item.style.backgroundColor = mycolor[col]
+            }
+        }
+    </script>
+</body>
+
+</html>
