@@ -46,7 +46,7 @@
         let name = document.querySelectorAll('input')[1]
         let age = document.querySelectorAll('input')[2]
         let add = document.querySelectorAll('button')[0]
-        let refac = document.querySelectorAll('button')[1]
+        let upd = document.querySelectorAll('button')[1]
         let del = document.querySelectorAll('button')[2]
         let info = document.querySelectorAll('button')[3]
 
@@ -62,7 +62,7 @@
             console.log(students)
         }
 
-        refac.onclick = function () {
+        upd.onclick = function () {
             let temp = students.findIndex(i => i.num == num.value);
             if (temp == -1) {
                 alert('등록되지 않은 번호입니다.')
