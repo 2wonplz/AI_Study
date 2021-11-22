@@ -61,5 +61,21 @@ def makegrade():
 
     ws['I1'] = '성적'
 
+    try:
+        for col in ws.iter_cols(min_col=8, min_row=2, max_col=9):
+            for idx, cell in enumerate(col, start=2):
+                if int(cell.value) >= 90:
+                    ws['I' + str(idx)] = 'A'
+                elif cell.value >= 80:
+                    ws['I' + str(idx)] = 'B'
+                elif cell.value >= 70:
+                    ws['I' + str(idx)] = 'C'
+                elif cell.value >= 60:
+                    ws['I' + str(idx)] = 'D'
+                else:
+                    ws['I' + str(idx)] = 'F'
+    except Exception as e:
+        print(e)
+
     wb.save('score.xlsx')
     wb.close()
