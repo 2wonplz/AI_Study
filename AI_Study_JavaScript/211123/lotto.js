@@ -1,5 +1,5 @@
-function lotto(dwrNo, one, two, three, four, five, six, bns) {
-    this.dwrNo = dwrNo
+function lotto(drwNo, one, two, three, four, five, six, bns) {
+    this.drwNo = drwNo
     this.one = one
     this.two = two
     this.three = three
