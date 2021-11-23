@@ -1,7 +1,7 @@
 let numbers = []
 let mycount = -1
 let drwnumbers = []
-let lotto_color = ['yellow', 'blue', 'red', 'green', 'gray']
+let lotto_colors = ['yellow', 'blue', 'red', 'green', 'gray']
 
 function createLottoNum(drwnum) {
     if (isNaN(drwnum)) {
@@ -40,15 +40,29 @@ function createLottoNum(drwnum) {
 }
 
 function setBackgroundColor(num) {
-
+    let mynum = Number(num)
+    if (mynum <= 10)
+        return 'yellow'
+    else if (mynum <= 20)
+        return 'blue'
+    else if (mynum <= 30)
+        return 'red'
+    else if (mynum <= 40)
+        return 'gray'
+    else
+        return 'green'
 }
 
 function setFontColor(num) {
-
+    let mynum = Number(num)
+    if (mynum >= 11 && mynum <= 30)
+        return 'white'
+    return 'black'
 }
 
 window.onload = () => {
     let start_lotto = document.querySelector('#create_lotto')
+    let drwNum = document.querySelector('#drwNum')
     start_lotto.onclick = () => {
         createLottoNum(drwNum.value)
         let mylottos
@@ -73,10 +87,52 @@ window.onload = () => {
         mylottos[7].innerHTML = lottos[mycount].bns
     }
 
-    let drwNum = document.querySelector('#drwNum')
     let all_random = document.querySelector('#all_random')
+    all_random.onclick = () => {
+        for (let i = 1; i < 8; i++) {
+            document.querySelectorAll('#one>.one')[i].style.backgroundColor = lotto_colors[Math.floor(Math.random() * 5)]
+            document.querySelectorAll('#two>.two')[i].style.backgroundColor = lotto_colors[Math.floor(Math.random() * 5)]
+            document.querySelectorAll('#three>.three')[i].style.backgroundColor = lotto_colors[Math.floor(Math.random() * 5)]
+        }
+    }
+
     let case_by_case_random = document.querySelector('#case_by_case_random')
+    case_by_case_random.onclick = () => {
+        let tempcolor = lotto_colors[Math.floor(Math.random() * 5)]
+        for (let i = 1; i < 8; i++)
+            document.querySelectorAll('#one>.one')[i].style.backgroundColor = tempcolor
+        tempcolor = lotto_colors[Math.floor(Math.random() * 5)]
+        for (let i = 1; i < 8; i++)
+            document.querySelectorAll('#two>.two')[i].style.backgroundColor = tempcolor
+        tempcolor = lotto_colors[Math.floor(Math.random() * 5)]
+        for (let i = 1; i < 8; i++)
+            document.querySelectorAll('#three>.three')[i].style.backgroundColor = tempcolor
+    }
+
     let same_color = document.querySelector('#same_color')
+    same_color.onclick = () => {
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        let tempcolor = `rgb(${r}, ${g}, ${b})`
+        for (let i = 1; i < 8; i++) {
+            document.querySelectorAll('#one>.one')[i].style.backgroundColor = tempcolor
+            document.querySelectorAll('#two>.two')[i].style.backgroundColor = tempcolor
+            document.querySelectorAll('#three>.three')[i].style.backgroundColor = tempcolor
+        }
+    }
+
     let number_by_number = document.querySelector('#number_by_number')
+    number_by_number.onclick = () => {
+        for (let i = 1; i < 8; i++) {
+            document.querySelectorAll('#one>.one')[i].style.backgroundColor = setBackgroundColor(document.querySelectorAll('#one>.one')[i].innerText)
+            document.querySelectorAll('#two>.two')[i].style.backgroundColor = setBackgroundColor(document.querySelectorAll('#two>.two')[i].innerText)
+            document.querySelectorAll('#three>.three')[i].style.backgroundColor = setBackgroundColor(document.querySelectorAll('#three>.three')[i].innerText)
+        }
+    }
+
     let black_and_white = document.querySelector('#black_and_white')
+    black_and_white.onclick = () => {
+
+    }
 }
