@@ -32,6 +32,9 @@ function createLottoNum(drwnum) {
         numbers.push(mynum)
     }
 
+    numbers.sort(function (a, b) {
+        return a - b
+    })
     let temp = new lotto(drwnum, numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6])
     lottos.push(temp)
     numbers = []
@@ -133,6 +136,10 @@ window.onload = () => {
 
     let black_and_white = document.querySelector('#black_and_white')
     black_and_white.onclick = () => {
-
+        for (let i = 1; i < 8; i++) {
+            document.querySelectorAll('#one>.one')[i].style.color = setFontColor(document.querySelectorAll('#one>.one')[i].innerText)
+            document.querySelectorAll('#two>.two')[i].style.color = setFontColor(document.querySelectorAll('#two>.two')[i].innerText)
+            document.querySelectorAll('#three>.three')[i].style.color = setFontColor(document.querySelectorAll('#three>.three')[i].innerText)
+        }
     }
 }
