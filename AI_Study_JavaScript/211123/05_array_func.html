@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <script>
+        function test(...items) {
+            console.log(items)
+        }
+
+        const numbers = [11, 55, 22, 33, 99]
+        // v : value, i : index, a : array
+        numbers.forEach((v, i, a) => {
+            console.log(`${i}번째 요소 : ${v}`)
+            test(...a)
+        })
+
+        numbers.forEach((v) => {
+            console.log(`값 : ${v}`)
+        })
+
+        const pwnumbers = numbers.map((v) => {
+            return v * v
+        })
+        test(...numbers)
+        test(...pwnumbers)
+
+        const even_numbers = numbers.filter((v) => {
+            return v % 2 == 0
+        })
+        test(...even_numbers)
+
+        let mynumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        mynumbers.filter(
+            (v) => v % 2 == 0
+        ).map(
+            (v) => v * v
+        ).forEach(
+            (v) => console.log(mynumbers)
+        )
+    </script>
+</body>
+
+</html>
