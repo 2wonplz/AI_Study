@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function nextRandomInteger(limit) {
+            return Math.round(Math.random() * limit)
+        }
+
+        let randomAlphabet = (
+            function () {
+                let alphabet =
+                    'ABCDEFGHIJKLMNOPQRSTUVWXYZ가나다라마바사아자차카타파하あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわゐゑをん'
+                return function () {
+                    return alphabet.charAt(nextRandomInteger(87))
+                }
+            }
+        )()
+
+        function randomSpeed(maxSpeed) {
+            return Math.random() * maxSpeed - Math.random() * maxSpeed
+        }
+    </script>
+    <script>
+        let canvasWidth = 800
+        let canvasHeight = 600
+
+        function MovingText(param) {
+            this.x = nextRandomInteger(canvasWidth)
+            this.y = nextRandomInteger(canvasHeight)
+            this.vx = randomSpeed(10)
+            this.vy = randomSpeed(10)
+            this.b = document.createElement('h1')
+
+            if (!param)
+                this.b.innerText = randomAlphabet()
+            else
+                this.b.innerText = param
+
+            this.b.style.position = 'fixed'
+            document.body.appendChild(this.b)
+        }
+
+        MovingText.prototype.move = function () {
+            if (this.x < 0 || this.x > canvasWidth)
+                this.vx *= -1
+            if (this.y < 0 || this.y > canvasHeight)
+                this.vy *= -1
+            this.x += this.vx
+            this.y += this.vy
+
+            this.b.style.left = this.x + 'px'
+            this.b.style.top = this.y + 'px'
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            let adder = document.querySelector('button')
+            let input = document.querySelector('input')
+            adder.onclick = () => {
+                MovingTexts.push(new MovingText(input.value))
+            }
+
+            let MovingTexts = []
+            for (let i = 0; i < 200; i++)
+                MovingTexts.push(new MovingText())
+
+            setInterval(function () {
+                for (let i in MovingTexts) {
+                    MovingTexts[i].move()
+                    MovingTexts[i].b.style.color =
+                        `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+                    document.body.style.backgroundColor =
+                        `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+                }
+            }, 1000 / 30)
+        }
+    </script>
+    <style>
+        button,
+        input {
+            left: 0px;
+            top: 650px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button>글자 추가</button>
+</body>
+
+</html>
