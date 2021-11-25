@@ -1,12 +1,6 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import *
 
-
-# from a import doA
-#
-# doA()
-#
-# print(__name__)
 
 class MyApp(QWidget):
     def __init__(self):
