@@ -7,7 +7,6 @@ from MainWindow import Ui_MainWindow
 from datetime import datetime
 import json
 import os
-import sys
 import requests
 from urllib.parse import urlencode
 
@@ -38,7 +37,7 @@ class WeatherWorker(QRunnable):
         try:
             params = dict(
                 q=self.location,
-                appid=OPENWEATHERMAP_API_KEY
+                appid='09d677368549b360d451b662922057a3'
             )
 
             url = 'http://api.openweathermap.org/data/2.5/weather?%s&units=metric' % urlencode(params)
