@@ -13,11 +13,9 @@
 
                 divs.forEach(
                     function (mydiv, myindex) {
-                        const val = myindex * 5
+                        const val = myindex * 10
                         mydiv.style.height = '10px'
-                        for(let i = 0; i < 256; i++){
-                            mydiv.style.backgroundColor = `rgb(${255}, ${val}, ${val})`
-                        }
+                        mydiv.style.backgroundColor = `rgb(${val}, ${val}, ${val})`
                     }
                 )
             })
