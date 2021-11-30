@@ -20,7 +20,7 @@
         let counter = 0
         let flag = false
         const myh1 = document.querySelector('h1')
-        myh1.addEventListener('click', function () {
+        setInterval(function () {
             if (flag == true)
                 counter--
             else
@@ -32,13 +32,7 @@
                 flag = false
 
             myh1.style.color = `rgb(${(counter * 10)}, 0, 0)`
-        })
-        myh1.addEventListener('mouseover', function () {
-            myh1.style.backgroundColor = 'yellow'
-        })
-        myh1.addEventListener('mouseout', function () {
-            myh1.style.backgroundColor = 'white'
-        })
+        }, 100)
     </script>
 </body>
 
