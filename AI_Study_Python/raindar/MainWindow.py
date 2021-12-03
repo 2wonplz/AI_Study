@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(330, 417)
+        MainWindow.resize(350, 430)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -210,6 +210,7 @@ class Ui_MainWindow(object):
         self.latitudeLabel.setText("")
         self.latitudeLabel.setObjectName("latitudeLabel")
         self.formLayout.setWidget(8, QtWidgets.QFormLayout.FieldRole, self.latitudeLabel)
+
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_4.setObjectName("label_4")
@@ -218,6 +219,7 @@ class Ui_MainWindow(object):
         self.sunriseLabel.setText("")
         self.sunriseLabel.setObjectName("sunriseLabel")
         self.formLayout.setWidget(9, QtWidgets.QFormLayout.FieldRole, self.sunriseLabel)
+
         self.label_9 = QtWidgets.QLabel(self.centralwidget)
         self.label_9.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.label_9.setObjectName("label_9")
@@ -256,20 +258,20 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Raindar"))
-        self.lineEdit.setText(_translate("MainWindow", "Utrecht,the Netherlands"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Fairy of Weather"))
+        self.lineEdit.setText(_translate("MainWindow", "Daegu, KR"))
         self.forecastTime1.setText(_translate("MainWindow", "+3h"))
         self.forecastTime2.setText(_translate("MainWindow", "+6h"))
         self.forecastTime3.setText(_translate("MainWindow", "+9h"))
         self.forecastTime4.setText(_translate("MainWindow", "+12h"))
         self.forecastTime5.setText(_translate("MainWindow", "+15h"))
-        self.label_5.setText(_translate("MainWindow", "Barometer"))
-        self.label_6.setText(_translate("MainWindow", "Temperature"))
-        self.label_7.setText(_translate("MainWindow", "Humidity"))
-        self.label_8.setText(_translate("MainWindow", "Pressure"))
-        self.label.setText(_translate("MainWindow", "Location"))
-        self.label_2.setText(_translate("MainWindow", "Longitude"))
-        self.label_3.setText(_translate("MainWindow", "Latitude"))
-        self.label_4.setText(_translate("MainWindow", "Sunrise"))
-        self.label_9.setText(_translate("MainWindow", "Speed"))
-        self.label_10.setText(_translate("MainWindow", "Wind"))
+        self.label_5.setText(_translate("MainWindow", "기압계"))
+        self.label_6.setText(_translate("MainWindow", "기온"))
+        self.label_7.setText(_translate("MainWindow", "습도"))
+        self.label_8.setText(_translate("MainWindow", "기압"))
+        self.label.setText(_translate("MainWindow", "지역"))
+        self.label_2.setText(_translate("MainWindow", "경도"))
+        self.label_3.setText(_translate("MainWindow", "위도"))
+        self.label_4.setText(_translate("MainWindow", "일출시간"))
+        self.label_9.setText(_translate("MainWindow", "풍속"))
+        self.label_10.setText(_translate("MainWindow", "속도계"))
