@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="myjq.js"></script>
     <style>
         .max {
             color: deeppink;
@@ -53,10 +54,9 @@
         }
 
         for (let i = 0; i < 6; i++) {
-            let myh1 = document.querySelector(`'h1.${i + 1}'`)
-            let myh2 = document.querySelector(`'h2.${i + 1}'`)
-            myh1.innerHTML = dice[i]
-            myh2.innerHTML = dice_per[i]
+            let tag = document.getElementsByClassName(i + 1)
+            tag[0].innerHTML = dice[i]
+            tag[1].innerHTML = dice_per[i]
         }
     </script>
 </body>
