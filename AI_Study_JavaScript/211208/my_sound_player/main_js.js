@@ -28,7 +28,6 @@ window.onload = function () {
 
             createBubbles(index)
         }
-
     })
 
     const createBubbles = function (index) {
