@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(이름, 성별, 번호) {
+                this.이름 = 이름
+                this.성별 = 성별
+                this.번호 = 번호
+            }
+            toString() {
+                return `'${this.이름}'학생은 '${this.성별}'학생이며, '${this.번호}'번이다.`
+            }
+        }
+
+        const people = []
+
+        function add() {
+            let myname = document.getElementById('name').value
+            let mygender = document.getElementById('gender').value
+            let mynum = document.getElementById('num').value
+
+            let temp = people.findIndex(i => i.번호 == mynum)
+            if (temp != -1) {
+                alert('중복된 번호는 저장할 수 없습니다.')
+            } else {
+                people.push(new Person(myname, mygender, mynum))
+                alert('등록이 완료되었습니다.')
+            }
+        }
+
+        function print() {
+            for (const item of people) {
+                let myh1 = document.createElement('h1')
+                document.body.appendChild(myh1)
+                if (item.성별 == '남') {
+                    myh1.innerHTML = item.toString()
+                    myh1.style.color = 'blue'
+                    myh1.style.backgroundColor = 'green'
+                } else if (item.성별 == '여') {
+                    myh1.innerHTML = item.toString()
+                    myh1.style.color = 'pink'
+                    myh1.style.backgroundColor = 'black'
+                }
+            }
+        }
+
+        function reset() {
+            let h1s = document.querySelectorAll('h1')
+            for (const item of h1s)
+                item.innerHTML = ''
+        }
+    </script>
+
+    이름 : <input type="text" id="name"><br>
+    성별 : <input type="text" id="gender"><br>
+    번호 : <input type="text" id="num"><br>
+    <button onclick="add()">추가</button>
+    <button onclick="print()">출력</button>
+    <button onclick="reset()">리셋</button>
+</body>
+
+</html>
