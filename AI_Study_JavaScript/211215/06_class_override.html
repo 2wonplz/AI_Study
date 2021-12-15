@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Cat {
+            constructor(이름, 나이, 집사이름) {
+                this.이름 = 이름
+                this.나이 = 나이
+                this.집사이름 = 집사이름
+            }
+            eat() {
+                console.log("냠냠~ " + this.이름 + "는 식사 중")
+            }
+        }
+
+        class Tiger extends Cat {
+            constructor(name, age, master, sleepTime) {
+                super(name, age, master)
+                this.수면시간 = sleepTime
+            }
+            eat() {
+                super.eat()
+                console.log("쩝쩝~ ")
+            }
+            cry() {
+                console.log("어흥!")
+            }
+            sleep() {
+                console.log(this.수면시간 + "시간동안 자는 중")
+            }
+            toString() {
+                return "이 호랑이는 " + this.이름 + "이며, 주인 이름은 " + this.집사이름 + "입니다. " + this.나이 + "살이며, " + this.수면시간 +
+                    "시간만큼 잠을 잡니다."
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        let cat1 = new Cat("까미", 12, "ABC")
+        let tiger = new Tiger("까치", 2, "DEF", 10)
+        console.log("----------------")
+        console.log(cat1 + '')
+        console.log(tiger + '')
+        console.log("----------------")
+
+        cat1.eat()
+        tiger.eat()
+        tiger.cry()
+        tiger.sleep()
+    </script>
+</body>
+
+</html>
