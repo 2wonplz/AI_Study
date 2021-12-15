@@ -23,9 +23,21 @@
 
 <body>
     <script>
-        let mydoggy = new Dog("A", 3, "골든리트리버")
-        alert(mydoggy.name + "는 " + mydoggy.age + "살이고, " + mydoggy.견종 + "입니다.")
-        alert(mydoggy.toString())
+        let mydoggy1 = new Dog("A", 3, "골든리트리버")
+        alert(mydoggy1.name + "는 " + mydoggy1.age + "살이고, " + mydoggy1.견종 + "입니다.")
+        alert(mydoggy1.toString())
+
+        let mydoggy2 = new Dog("B", 6, "시바")
+        alert(mydoggy2.name + "는 " + mydoggy2.age + "살이고, " + mydoggy2.견종 + "입니다.")
+        alert(mydoggy2.toString())
+
+        let doggy = []
+        doggy.push(mydoggy1)
+        doggy.push(mydoggy2)
+        doggy.push(new Dog("C", 8, "진돗개"))
+
+        for (const item of doggy)
+            console.log(item.toString())
     </script>
 </body>
 
