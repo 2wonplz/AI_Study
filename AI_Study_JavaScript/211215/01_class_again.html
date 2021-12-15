@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Dog {
+            constructor(name, age, 견종) {
+                this.name = name
+                this.age = age
+                this.견종 = 견종
+            }
+
+            toString() {
+                return `이름 : ${this.name}, 나이 : ${this.age}, 견종 : ${this.견종}`
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        let mydoggy = new Dog("A", 3, "골든리트리버")
+        alert(mydoggy.name + "는 " + mydoggy.age + "살이고, " + mydoggy.견종 + "입니다.")
+        alert(mydoggy.toString())
+    </script>
+</body>
+
+</html>
