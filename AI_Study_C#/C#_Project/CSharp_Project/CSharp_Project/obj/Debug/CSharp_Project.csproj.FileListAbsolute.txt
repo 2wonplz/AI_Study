@@ -1,0 +1,11 @@
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\bin\Debug\CSharp_Project.exe.config
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\bin\Debug\CSharp_Project.exe
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\bin\Debug\CSharp_Project.pdb
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\obj\Debug\CSharp_Project.csproj.SuggestedBindingRedirects.cache
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\obj\Debug\CSharp_Project.Form1.resources
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\obj\Debug\CSharp_Project.Properties.Resources.resources
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\obj\Debug\CSharp_Project.csproj.GenerateResource.cache
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\obj\Debug\CSharp_Project.csproj.CoreCompileInputs.cache
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\obj\Debug\CSharp_Project.exe
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\obj\Debug\CSharp_Project.pdb
+E:\AI_Study\AI_Study_C#\C#_Project\CSharp_Project\CSharp_Project\obj\Debug\CSharp_Project.csproj.AssemblyReference.cache

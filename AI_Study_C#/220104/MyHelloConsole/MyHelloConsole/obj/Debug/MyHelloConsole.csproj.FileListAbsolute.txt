@@ -1,0 +1,8 @@
+E:\AI_Study\AI_Study_C#\220104\MyHelloConsole\MyHelloConsole\bin\Debug\MyHelloConsole.exe.config
+E:\AI_Study\AI_Study_C#\220104\MyHelloConsole\MyHelloConsole\bin\Debug\MyHelloConsole.exe
+E:\AI_Study\AI_Study_C#\220104\MyHelloConsole\MyHelloConsole\bin\Debug\MyHelloConsole.pdb
+E:\AI_Study\AI_Study_C#\220104\MyHelloConsole\MyHelloConsole\obj\Debug\MyHelloConsole.csproj.AssemblyReference.cache
+E:\AI_Study\AI_Study_C#\220104\MyHelloConsole\MyHelloConsole\obj\Debug\MyHelloConsole.csproj.SuggestedBindingRedirects.cache
+E:\AI_Study\AI_Study_C#\220104\MyHelloConsole\MyHelloConsole\obj\Debug\MyHelloConsole.csproj.CoreCompileInputs.cache
+E:\AI_Study\AI_Study_C#\220104\MyHelloConsole\MyHelloConsole\obj\Debug\MyHelloConsole.exe
+E:\AI_Study\AI_Study_C#\220104\MyHelloConsole\MyHelloConsole\obj\Debug\MyHelloConsole.pdb

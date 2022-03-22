@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "dce46e84-73c5-4c06-8f3f-6ee6ef471138": {
+      "ProjectGuid": "dce46e84-73c5-4c06-8f3f-6ee6ef471138",
+      "DisplayName": "MyCsharp_02",
+      "ColorIndex": 0
+    },
+    "a0b5e2b9-bc83-4f02-9f02-d8ca2ec64d4a": {
+      "ProjectGuid": "a0b5e2b9-bc83-4f02-9f02-d8ca2ec64d4a",
+      "DisplayName": "MyCsharp_02_02",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

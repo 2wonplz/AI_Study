@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "da617de2-2ccb-4015-abfc-71d6a6de0a49": {
+      "ProjectGuid": "da617de2-2ccb-4015-abfc-71d6a6de0a49",
+      "DisplayName": "MyHelloConsole",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

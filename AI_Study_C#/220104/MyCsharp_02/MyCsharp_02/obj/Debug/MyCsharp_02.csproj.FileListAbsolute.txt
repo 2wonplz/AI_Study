@@ -1,0 +1,8 @@
+E:\AI_Study\AI_Study_C#\220104\MyCsharp_02\MyCsharp_02\bin\Debug\MyCsharp_02.exe.config
+E:\AI_Study\AI_Study_C#\220104\MyCsharp_02\MyCsharp_02\bin\Debug\MyCsharp_02.exe
+E:\AI_Study\AI_Study_C#\220104\MyCsharp_02\MyCsharp_02\bin\Debug\MyCsharp_02.pdb
+E:\AI_Study\AI_Study_C#\220104\MyCsharp_02\MyCsharp_02\obj\Debug\MyCsharp_02.csproj.AssemblyReference.cache
+E:\AI_Study\AI_Study_C#\220104\MyCsharp_02\MyCsharp_02\obj\Debug\MyCsharp_02.csproj.SuggestedBindingRedirects.cache
+E:\AI_Study\AI_Study_C#\220104\MyCsharp_02\MyCsharp_02\obj\Debug\MyCsharp_02.csproj.CoreCompileInputs.cache
+E:\AI_Study\AI_Study_C#\220104\MyCsharp_02\MyCsharp_02\obj\Debug\MyCsharp_02.exe
+E:\AI_Study\AI_Study_C#\220104\MyCsharp_02\MyCsharp_02\obj\Debug\MyCsharp_02.pdb

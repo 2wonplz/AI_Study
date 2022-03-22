@@ -1,0 +1,10 @@
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\bin\Debug\OracleDB_ParkingCar.exe.config
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\bin\Debug\OracleDB_ParkingCar.exe
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\bin\Debug\OracleDB_ParkingCar.pdb
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\obj\Debug\OracleDB_ParkingCar.csproj.SuggestedBindingRedirects.cache
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\obj\Debug\OracleDB_ParkingCar.Form1.resources
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\obj\Debug\OracleDB_ParkingCar.Properties.Resources.resources
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\obj\Debug\OracleDB_ParkingCar.csproj.GenerateResource.cache
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\obj\Debug\OracleDB_ParkingCar.csproj.CoreCompileInputs.cache
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\obj\Debug\OracleDB_ParkingCar.exe
+E:\AI_Study\AI_Study_C#\220119\OracleDB_ParkingCar\OracleDB_ParkingCar\obj\Debug\OracleDB_ParkingCar.pdb

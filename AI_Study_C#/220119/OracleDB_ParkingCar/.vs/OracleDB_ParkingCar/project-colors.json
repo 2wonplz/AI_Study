@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "838f1cd3-e48c-4117-b0f6-cb5929371e92": {
+      "ProjectGuid": "838f1cd3-e48c-4117-b0f6-cb5929371e92",
+      "DisplayName": "OracleDB_ParkingCar",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
